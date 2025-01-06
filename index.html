@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmark</title>
+    <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=PT+Sans+Caption:wght@400;700&family=Pacifico&family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+
+</head>
+<body>
+ 
+    <header class="mt-3">
+        <div class="container p-5 ">
+            <div class="row">
+                <h1 class="px-0 m-auto position-relative">Bookmarker</h1>
+            </div>
+        </div>
+    </header>
+
+    <section class="inputs-section  " >
+       <div class="container py-3 ">
+        <h2  class="text-center mb-5"><i class="fa-solid fa-bookmark"></i> Bookmark your favorite sites <i class="fa-solid fa-bookmark"></i></h2>
+        <div class="row ">
+            <div class="form-group mb-3  position-relative">
+                <label for="siteName" class="form-label fw-bold"><i class="fa-solid fa-book-bookmark"></i> Site Name</label>
+                <input oninput="styleNameInput()"  type="text" class="form-control " id="siteName" placeholder="Bookmark Name">
+                <i class="fa-solid fa-check fw-bold d-none position-absolute " id="trueIcon"></i>
+                <i class="fa-solid fa-circle-exclamation fw-bold d-none position-absolute" id="falseIcon"></i>
+            </div>
+            <div class="form-group mb-4 position-relative">
+                <label for="siteUrl" class="form-label fw-bold"><i class="fa-solid fa-link"></i> Site Url</label>
+                <input oninput="styleUrlInput()" type="text" class="form-control" id="siteUrl" placeholder="Website URL">
+                <i class="fa-solid fa-check fw-bold d-none position-absolute " id="trueUrlIcon"></i>
+                <i class="fa-solid fa-circle-exclamation fw-bold d-none position-absolute" id="falseUrlIcon"></i>
+            </div>   
+        </div>
+        <button onclick="addData()" class="btn btn-submit d-block m-auto px-5 ">Submit</button>
+       </div>
+    </section>
+
+    <section class="data py-5">
+        <div class="container ">
+           <table class="w-100 text-center" >
+           <thead>
+            <tr class="bg-white ">
+                <th class="py-2">Index</th>
+                <th class="py-2"> Website Name</th>
+                <th class="py-2"> Visit</th>
+                <th class="py-2"> Delete</th>
+            </tr>
+           </thead>
+
+           <tbody id="contentData"></tbody>
+           </table>
+        </div>
+    </section>
+
+    
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="script.js"></script>
+</body>
+</html>
